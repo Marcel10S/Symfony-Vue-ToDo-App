@@ -38,4 +38,13 @@ class PlannedDayRepository extends ServiceEntityRepository
             $this->getEntityManager()->flush();
         }
     }
+
+    public function getPlannedDayDisplayArray() : Array
+    {
+        $plannedDays = $this->findAll();
+        foreach($plannedDays as $key => $plannedDay) {
+            $plannedDay->getTasks()->getValues();
+        }
+        return $plannedDays;
+    }
 }
