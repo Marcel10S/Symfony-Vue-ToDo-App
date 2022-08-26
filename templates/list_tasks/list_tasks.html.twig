@@ -1,19 +1,11 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello ListTasksController!{% endblock %}
+{% block title %}
+    MyTasks
+{% endblock %}
 
-{# Fast template to test feature #}
 {% block body %}
-
-    {% for planned_day in planned_days %}
-        <div>
-            {{ planned_day.dayDate.format("Y-m-d") }} &nbsp
-            {% for task in planned_day.tasks.snapshot %}
-                {{ task.name }} &nbsp
-                {{ task.type }} &nbsp
-                {{ task.importance }} &nbsp
-            {% endfor %}
-        </div>
-    {% endfor %}
-
+    <div id="app">
+        <App />
+    </div>
 {% endblock %}
