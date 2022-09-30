@@ -1,1 +1,3 @@
-<div *ngFor="let day of displayDays">{{ day.day_date }}</div>
+<div class="taskBoardContainer">
+    <app-day class="Day" *ngFor="let day of displayDays" [dayData]='day'></app-day>
+</div>

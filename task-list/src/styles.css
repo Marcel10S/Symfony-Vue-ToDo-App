@@ -1,1 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.taskBoardContainer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.Day {
+    background-color: #AAA;
+    width: 100%;
+    padding: 16px;
+    margin: 8px;
+    border: 2px solid black;
+    border-radius: 8px;
+    min-height: min-content;
+}
+
+.DayInfo {
+    font-weight: bold;
+    border: 2px solid black;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 16px;
+}

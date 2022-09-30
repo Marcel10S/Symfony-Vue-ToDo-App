@@ -1,0 +1,8 @@
+<div class="DayContainer">
+    <div class="DayInfo">
+        {{dayData.day_date}}
+    </div>
+    <div class="TaskContainer">
+        <app-task class="Task" *ngFor="let task of dayData.tasks" [taskData]="task"></app-task>
+    </div>
+</div>

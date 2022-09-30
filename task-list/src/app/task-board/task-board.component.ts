@@ -1,20 +1,21 @@
 import { Component, OnInit } from '@angular/core';
+import { dayInterface } from '../interface/day.interface'; 
 
 @Component({
   selector: 'app-task-board',
-  templateUrl: './task-board.component.html',
-  styleUrls: ['./task-board.component.css']
+  templateUrl: './task-board.component.html'
 })
 export class TaskBoardComponent implements OnInit {
 
   constructor() { }
 
-  public displayDays: Array<any> = [ // zamiast any dać nowo stworzony interfejs     
+  public displayDays: Array<dayInterface> = [     
     {
     day_date: '2022-08-20',
     completion_level: 80,
-    taks: {
-      1: {
+    tasks: [
+      {
+        id: 1,
         name: 'Wynieść śmieci',
         description: 'Wywalić śmieci i żwirek dla kota',
         status: 'not_done',
@@ -22,7 +23,8 @@ export class TaskBoardComponent implements OnInit {
         deadline_time: '12:00:00',
         type: 'house_hold',
       },
-      2: {
+      {
+        id: 2,
         name: 'Umyć naczynia',
         description: 'załadować zmywarkę i posprzątać blaty',
         status: 'not_done',
@@ -30,35 +32,36 @@ export class TaskBoardComponent implements OnInit {
         deadline_time: '22:00:00',
         type: 'house_hold',
       },
-      3: {
+      {
+        id: 3,
         name: 'Nauka Symfony',
         description: 'Paginacja, Wysyłka danych do Api, formularze',
         status: 'in_progress',
         importance: 'important',
-        deadline_time: null,
         type: 'self_development',
-      },
-    }
+      }
+    ]
   },
   {
     day_date: '2022-08-21',
     completion_level: 80,
-    tasks: {
-      4: {
+    tasks: [
+      {
+        id: 4,
         name: 'Siłownia',
         description: 'Klata + triceps',
         status: 'not_done',
         importance: 'important',
-        deadline_time: null,
         type: 'self_development',
       },
-    }
+    ]
   },
   {
     day_date: '2022-08-22',
     completion_level: 80,
-    tasks: {
-      5: {
+    tasks: [
+      {
+        id: 5,
         name: 'Nauka Angulara',
         description: 'Przerobić jeszcze raz serwisy i komunikację komponentów',
         status: 'in_progress',
@@ -66,13 +69,14 @@ export class TaskBoardComponent implements OnInit {
         deadline_time: '22:00:00',
         type: 'self_development',
       },
-    }
+    ]
   },
   {
     day_date: '2022-08-23',
     completion_level: 80,
-    tasks: {
-      6: {
+    tasks: [
+      {
+        id: 6,
         name: 'Prezent dla Teresy',
         description: 'Może herbate jakąś bardziej fancy?',
         status: 'in_progress',
@@ -80,21 +84,21 @@ export class TaskBoardComponent implements OnInit {
         deadline_time: '10:00:00',
         type: 'other',
       },
-    },
+    ],
   },
   {
     day_date: '2022-08-24',
     completion_level: 80,
-    tasks: {
-      7: {
+    tasks: [
+      {
+        id: 7,
         name: 'Siłownia',
         description: 'Klata + triceps',
         status: 'not_done',
         importance: 'important',
-        deadline_time: null,
         type: 'self_development',
       },
-    }
+    ]
   },
 ];
 
