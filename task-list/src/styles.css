@@ -18,7 +18,7 @@ body {
     margin: 8px;
     border: 2px solid black;
     border-radius: 8px;
-    min-height: min-content;
+    height: 100%; 
 }
 
 .DayInfo {
